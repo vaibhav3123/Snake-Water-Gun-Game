@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Water Gun Game</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🐍 Snake Water Gun 💧🔫</h1>
+
+    <button onclick="playGame('snake')">Snake 🐍</button>
+    <button onclick="playGame('water')">Water 💧</button>
+    <button onclick="playGame('gun')">Gun 🔫</button>
+
+    <div id="result"></div>
+
+    <script>
+        function playGame(userChoice) {
+            const choices = ['snake', 'water', 'gun'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+            let result = '';
+
+            if (userChoice === computerChoice) {
+                result = `It's a draw! Both chose ${userChoice}`;
+            } else if (
+                (userChoice === 'snake' && computerChoice === 'water') ||
+                (userChoice === 'water' && computerChoice === 'gun') ||
+                (userChoice === 'gun' && computerChoice === 'snake')
+            ) {
+                result = `You win! ${userChoice} beats ${computerChoice}`;
+            } else {
+                result = `You lose! ${computerChoice} beats ${userChoice}`;
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+
+</body>
+
+</html>
