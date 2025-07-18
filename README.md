@@ -3,7 +3,7 @@
 A lightweight browser game inspired by the classic "Snake, Water, Gun" logic — a creative spin on Rock, Paper, Scissors.  
 Built entirely with **HTML**, **CSS**, and **JavaScript**, this project offers a fun and interactive way to practice core frontend concepts.
 
-🔗 **Play the Game Here:** [Live Demo](https://your-demo-link-here.com)
+🔗 **Play the Game Here:** [Live Demo](https://your-demo-link-here.com](https://vaibhav3123.github.io/Snake-Water-Gun-Game)
 
 ## 🎮 How to Play
 
